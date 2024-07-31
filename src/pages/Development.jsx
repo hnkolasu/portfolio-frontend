@@ -2,7 +2,7 @@ import React from "react";
 
 const Development = () => {
   return (
-    <div>
+    <div className="flex justify-center items-center w-full">
       <h1>Development</h1>
     </div>
   );

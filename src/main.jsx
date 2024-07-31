@@ -6,9 +6,12 @@ import {
   Route,
   createRoutesFromElements,
 } from "react-router-dom";
-import About from "./components/About.jsx";
-import Development from "./components/Development.jsx";
+import "./index.css";
+import Development from "./pages/Development.jsx";
 import Layout from "./components/Layout.jsx";
+import Nicolas from "./pages/Nicolas.jsx";
+import Blog from "./pages/Blog.jsx";
+import Design from "./pages/Design.jsx";
 
 const router = createBrowserRouter([
   {
@@ -17,11 +20,15 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <About />,
+        element: <Nicolas />,
       },
       {
-        path: "about",
-        element: <About />,
+        path: "blog",
+        element: <Blog />,
+      },
+      {
+        path: "design",
+        element: <Design />,
       },
       {
         path: "development",
@@ -31,14 +38,8 @@ const router = createBrowserRouter([
   },
 ]);
 
-createRoutesFromElements(
-  <Route path="/" element={<Layout />}>
-    <Route path="/" element={<About />} />
-    <Route path="about" element={<About />} />
-    <Route path="/development" element={<Development />} />
-  </Route>
-);
-
 createRoot(document.getElementById("root")).render(
-  <RouterProvider router={router} />
+  <div className="min-h-screen min-w-screen">
+    <RouterProvider router={router} />
+  </div>
 );
