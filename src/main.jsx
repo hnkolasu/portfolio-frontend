@@ -1,11 +1,5 @@
-import * as React from "react";
 import { createRoot } from "react-dom/client";
-import {
-  createBrowserRouter,
-  RouterProvider,
-  Route,
-  createRoutesFromElements,
-} from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 import Development from "./pages/Development.jsx";
 import Layout from "./components/Layout.jsx";
